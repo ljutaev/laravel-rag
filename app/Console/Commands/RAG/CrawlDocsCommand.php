@@ -42,7 +42,7 @@ class CrawlDocsCommand extends Command
                 ]
             );
 
-            $this->success("Crawling completed successfully!");
+            $this->info("Crawling completed successfully!");
         } catch (\Exception $e) {
             $this->error("Error during crawling: " . $e->getMessage());
             return Command::FAILURE;
