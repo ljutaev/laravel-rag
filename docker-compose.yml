@@ -53,6 +53,15 @@ services:
     networks:
       - laravel-rag-network
 
+  adminer:
+    image: adminer
+    container_name: laravel-rag-adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    networks:
+      - laravel-rag-network
+
   ollama:
     image: ollama/ollama:latest
     container_name: laravel-rag-ollama
